@@ -11,18 +11,6 @@ namespace Black\Bundle\LinkBundle\Model\Category;
 
 abstract class Category implements CategoryInterface
 {
-    protected $name;
-
-    protected $slug;
-
-    protected $description;
-
-    protected $url;
-
-    private $createdAt;
-
-    private $updatedAt;
-
     /**
      * {@inheritdoc}
      */
