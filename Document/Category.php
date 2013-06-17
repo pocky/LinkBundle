@@ -8,12 +8,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Black\Bundle\LinkBundle\Document\Category;
+namespace Black\Bundle\LinkBundle\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Black\Bundle\LinkBundle\Model\Category\Category as BaseCategory;
+use Black\Bundle\LinkBundle\Model\Category as BaseCategory;
 use Black\Bundle\EngineBundle\Traits\ThingDocument;
 
 /**

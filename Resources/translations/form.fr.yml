@@ -1,0 +1,23 @@
+link:
+  admin:
+    category:
+      description:
+        text: Descritpion
+      name:
+        text: Nom de la catégorie
+      slug:
+        text: Slug
+      url:
+        text: Url
+        
+    link:
+      description:
+        text: Descritpion
+      image:
+        text: Image du lien
+      name:
+        text: Nom du lien
+      slug:
+        text: Slug
+      url:
+        text: Url

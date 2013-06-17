@@ -14,7 +14,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Doctrine\Bundle\MongoDBBundle\ManagerRegistry;
-use Black\Bundle\LinkBundle\Model\Category\CategoryInterface;
+use Black\Bundle\LinkBundle\Model\CategoryInterface;
 
 class CategoryFormHandler
 {
@@ -42,11 +42,11 @@ class CategoryFormHandler
 
             if ($this->form->isValid()) {
 
-                $this->setFlash('success', $category->getName() . ' was successfully updated!');
+                $this->setFlash('success', 'success.link.admin.category.edit');
 
                 return true;
             } else {
-                $this->setFlash('failure', 'The form is not valid');
+                $this->setFlash('error', 'error.link.admin.category.form.not.valid');
             }
         }
     }
