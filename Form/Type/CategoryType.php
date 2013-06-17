@@ -30,19 +30,19 @@ class CategoryType extends AbstractType
     {
         $builder
             ->add('name', 'text', array(
-                    'label'         => 'link.admin.form.name'
+                    'label'         => 'link.admin.category.name.text'
                 ))
             ->add('slug', 'text', array(
-                    'label'         => 'link.admin.form.slug',
+                    'label'         => 'link.admin.category.slug.text',
                     'required'      => false
                 ))
             ->add('description', 'textarea', array(
-                    'label'         => 'link.admin.form.description',
+                    'label'         => 'link.admin.category.description.text',
                     'required'      => false
                 ))
             ->add('url', 'url', array(
                     'required'      => false,
-                    'label'         => 'link.admin.form.url'
+                    'label'         => 'link.admin.category.url.text'
                 ))
         ;
     }

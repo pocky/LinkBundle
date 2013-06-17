@@ -7,7 +7,7 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Black\Bundle\LinkBundle\Model\Link;
+namespace Black\Bundle\LinkBundle\Model;
 
 abstract class Link implements LinkInterface
 {

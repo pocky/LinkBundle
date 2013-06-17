@@ -14,7 +14,7 @@ use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Doctrine\Bundle\MongoDBBundle\ManagerRegistry;
-use Black\Bundle\LinkBundle\Model\Link\LinkInterface;
+use Black\Bundle\LinkBundle\Model\LinkInterface;
 
 class LinkFormHandler
 {
@@ -42,11 +42,11 @@ class LinkFormHandler
 
             if ($this->form->isValid()) {
 
-                $this->setFlash('success', $link->getName() . ' was successfully updated!');
+                $this->setFlash('success', 'success.link.admin.link.edit');
 
                 return true;
             } else {
-                $this->setFlash('failure', 'The form is not valid');
+                $this->setFlash('error', 'error.link.admin.link.form.not.valid');
             }
         }
     }
