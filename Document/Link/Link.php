@@ -14,7 +14,7 @@ use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Black\Bundle\LinkBundle\Model\Link\Link as BaseLink;
-use Black\Bundle\EngineBundle\Traits\ThingDocument;
+use Black\Bundle\EngineBundle\Traits\ThingDocumentTrait;
 
 /**
  * Category Document
@@ -23,7 +23,7 @@ use Black\Bundle\EngineBundle\Traits\ThingDocument;
  */
 class Link extends BaseLink
 {
-    use ThingDocument;
+    use ThingDocumentTrait;
 
     /**
      * @ODM\String
