@@ -15,7 +15,7 @@ use Doctrine\ODM\MongoDB\DocumentRepository;
 /**
  * Config repository.
  */
-class CategoryRepository extends DocumentRepository
+class LinkRepository extends DocumentRepository
 {
     private function getQueryBuilder()
     {
