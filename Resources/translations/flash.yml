@@ -1,0 +1,19 @@
+success:
+  link:
+    admin:
+      category:
+        edit: La catégorie a bien été créée!
+      link:
+        edit: Le lien a bien été créé!
+    
+error:
+  link:
+    admin:
+      category:
+        form:
+          not:
+            valid: Le formulaire n'est pas valide!
+      link:
+        form:
+          not:
+            valid: Le formulaire n'est pas valide!

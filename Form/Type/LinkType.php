@@ -30,22 +30,22 @@ class LinkType extends AbstractType
     {
         $builder
             ->add('name', 'text', array(
-                    'label'         => 'link.admin.form.name'
+                    'label'         => 'link.admin.link.name.text'
                 ))
             ->add('slug', 'text', array(
-                    'label'         => 'link.admin.form.slug',
+                    'label'         => 'link.admin.link.slug.text',
                     'required'      => false
                 ))
             ->add('description', 'textarea', array(
-                    'label'         => 'link.admin.form.description',
+                    'label'         => 'link.admin.link.description.text',
                     'required'      => false
                 ))
             ->add('url', 'url', array(
                     'required'      => false,
-                    'label'         => 'link.admin.form.url'
+                    'label'         => 'link.admin.linl.url.text'
                 ))
             ->add('image', 'file', array(
-                    'label'         => 'engine.admin.person.form.image',
+                    'label'         => 'link.admin.link.image.text',
                     'required'      => false
                 ))
             ->add('target', 'choices', array(
