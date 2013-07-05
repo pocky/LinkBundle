@@ -13,8 +13,8 @@ namespace Black\Bundle\LinkBundle\Document;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Black\Bundle\EngineBundle\Traits\ThingDocumentTrait;
 use Black\Bundle\LinkBundle\Model\Category as BaseCategory;
-use Black\Bundle\EngineBundle\Traits\ThingDocument;
 
 /**
  * Category Document
@@ -23,5 +23,5 @@ use Black\Bundle\EngineBundle\Traits\ThingDocument;
  */
 class Category extends BaseCategory
 {
-    use ThingDocument;
+    use ThingDocumentTrait;
 }
