@@ -10,10 +10,9 @@
  */
 namespace Black\Bundle\LinkBundle\Document;
 
-use Black\Bundle\EngineBundle\Document\BaseManager;
+use Black\Bundle\LinkBundle\Document\BaseManager;
 use Doctrine\ODM\MongoDB\Configuration;
 
 class CategoryManager extends BaseManager
 {
-    
 }
