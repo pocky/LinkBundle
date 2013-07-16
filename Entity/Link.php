@@ -10,49 +10,49 @@
 
 namespace Black\Bundle\LinkBundle\Document;
 
-use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Gedmo\Mapping\Annotation as Gedmo;
+
 use Black\Bundle\EngineBundle\Traits\ThingDocumentTrait;
 use Black\Bundle\LinkBundle\Model\Link as BaseLink;
 
 /**
  * Category Document
  *
- * @ODM\MappedSuperclass()
+ * @ORM\Entity()
  */
 class Link extends BaseLink
 {
     use ThingDocumentTrait;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="target", type="string", nullable=true)
      */
     protected $target;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="comment", type="string", nullable=true)
      */
     protected $comment;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="rating", type="string", nullable=true)
      */
     protected $rating;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="image", type="string", nullable=true)
      * @Assert\Image(maxSize="2M")
      */
     protected $image;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="path", type="string", nullable=true)
      */
     protected $path;
 
     /**
-     * @ODM\String
+     * @ORM\Column(name="relation", type="string", nullable=true)
      */
     protected $relation;
 }

@@ -9,6 +9,9 @@
  */
 namespace Black\Bundle\LinkBundle\Model;
 
+/**
+ * Link
+ */
 abstract class Link implements LinkInterface
 {
     protected $target;

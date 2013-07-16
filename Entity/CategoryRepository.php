@@ -10,15 +10,15 @@
  */
 namespace Black\Bundle\LinkBundle\Document;
 
-use Doctrine\ODM\MongoDB\DocumentRepository;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * Config repository.
  */
-class CategoryRepository extends DocumentRepository
+class CategoryRepository extends EntityRepository
 {
-    private function getQueryBuilder()
+    protected function getQueryBuilder($alias = 'c')
     {
-        return $this->createQueryBuilder();
+        return $this->createQueryBuilder($alias);
     }
 }
