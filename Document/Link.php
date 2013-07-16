@@ -21,7 +21,7 @@ use Black\Bundle\LinkBundle\Model\Link as BaseLink;
  *
  * @ODM\MappedSuperclass()
  */
-class Link extends BaseLink
+abstract class Link extends BaseLink
 {
     use ThingDocumentTrait;
 

@@ -8,22 +8,21 @@
  * file that was distributed with this source code.
  */
 
-namespace Black\Bundle\LinkBundle\Document;
+namespace Black\Bundle\LinkBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Gedmo\Mapping\Annotation as Gedmo;
 
-use Black\Bundle\EngineBundle\Traits\ThingDocumentTrait;
+use Black\Bundle\EngineBundle\Traits\ThingEntityTrait;
 use Black\Bundle\LinkBundle\Model\Link as BaseLink;
 
 /**
  * Category Document
- *
- * @ORM\Entity()
  */
-class Link extends BaseLink
+abstract class Link extends BaseLink
 {
-    use ThingDocumentTrait;
+    use ThingEntityTrait;
 
     /**
      * @ORM\Column(name="target", type="string", nullable=true)

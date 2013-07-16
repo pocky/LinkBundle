@@ -21,7 +21,7 @@ use Black\Bundle\LinkBundle\Model\Category as BaseCategory;
  *
  * @ODM\MappedSuperclass()
  */
-class Category extends BaseCategory
+abstract class Category extends BaseCategory
 {
     use ThingDocumentTrait;
 }
