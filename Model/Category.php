@@ -9,6 +9,9 @@
  */
 namespace Black\Bundle\LinkBundle\Model;
 
+/**
+ * BaseCategory
+ */
 abstract class Category implements CategoryInterface
 {
     /**

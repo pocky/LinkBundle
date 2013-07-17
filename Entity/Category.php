@@ -8,20 +8,19 @@
  * file that was distributed with this source code.
  */
 
-namespace Black\Bundle\LinkBundle\Document;
+namespace Black\Bundle\LinkBundle\Entity;
 
-use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Black\Bundle\EngineBundle\Traits\ThingDocumentTrait;
+
+use Black\Bundle\EngineBundle\Traits\ThingEntityTrait;
 use Black\Bundle\LinkBundle\Model\Category as BaseCategory;
 
 /**
- * Category Document
- *
- * @ODM\MappedSuperclass()
+ * Category Entity
  */
 abstract class Category extends BaseCategory
 {
-    use ThingDocumentTrait;
+    use ThingEntityTrait;
 }

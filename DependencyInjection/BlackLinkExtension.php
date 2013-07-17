@@ -26,7 +26,7 @@ class BlackLinkExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         if (!isset($config['db_driver'])) {
-            throw new \InvalidArgumentException('You must provide the black_engine.db_driver configuration');
+            throw new \InvalidArgumentException('You must provide the black_link.db_driver configuration');
         }
 
         try {
@@ -38,7 +38,9 @@ class BlackLinkExtension extends Extension
         $this->remapParametersNamespaces($config, $container, array(
                 ''      => array(
                     'category_class'    => 'black_link.category.model.class',
-                    'link_class'        => 'black_link.link.model.class'
+                    'link_class'        => 'black_link.link.model.class',
+                    'category_manager'  => 'black_link.category.manager',
+                    'link_manager'      => 'black_link.link.manager'
                 )
             ));
 
@@ -100,6 +102,9 @@ class BlackLinkExtension extends Extension
         }
     }
 
+    /**
+     * @return string
+     */
     public function getAlias()
     {
         return 'black_link';

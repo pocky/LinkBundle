@@ -10,7 +10,7 @@
     </parameters>
 
     <services>
-        <service id="black_link.document.manager" alias="doctrine.odm.mongodb.document_manager" />
+        <service id="black_link.document.manager" alias="doctrine.orm.entity_manager" />
 
         <service id="black_link.manager.link" class="%black_link.manager.link%">
             <argument type="service" id="black_link.document.manager" />
