@@ -21,7 +21,7 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('black_link');
 
-        $supportedDrivers = array('mongodb');
+        $supportedDrivers = array('mongodb', 'orm');
 
         $rootNode
             ->children()
@@ -36,9 +36,13 @@ class Configuration implements ConfigurationInterface
 
                 ->scalarNode('category_class')->isRequired()->cannotBeEmpty()->end()
                 ->scalarNode('link_class')->isRequired()->cannotBeEmpty()->end()
-
-            ->end()
-        ;
+                ->scalarNode('category_manager')
+                    ->defaultValue('Black\\Bundle\\LinkBundle\\Doctrine\\CategoryManager')
+                ->end()
+                ->scalarNode('link_manager')
+                    ->defaultValue('Black\\Bundle\\LinkBundle\\Doctrine\\LinkManager')
+                ->end()
+            ->end();
 
         $this->addCategorySection($rootNode);
         $this->addLinkSection($rootNode);
@@ -59,14 +63,17 @@ class Configuration implements ConfigurationInterface
                         ->addDefaultsIfNotSet()
                             ->children()
                                 ->scalarNode('name')->defaultValue('black_link_category_form')->end()
-                                ->scalarNode('type')->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Type\\CategoryType')->end()
-                                ->scalarNode('handler')->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Handler\\CategoryFormHandler')->end()
+                                ->scalarNode('type')
+                                    ->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Type\\CategoryType')
+                                ->end()
+                                ->scalarNode('handler')
+                                    ->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Handler\\CategoryFormHandler')
+                                ->end()
                             ->end()
                         ->end()
                     ->end()
                 ->end()
-            ->end()
-        ;
+            ->end();
     }
 
     private function addLinkSection(ArrayNodeDefinition $node)
@@ -81,13 +88,16 @@ class Configuration implements ConfigurationInterface
                         ->addDefaultsIfNotSet()
                             ->children()
                                 ->scalarNode('name')->defaultValue('black_link_link_form')->end()
-                                ->scalarNode('type')->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Type\\LinkType')->end()
-                                ->scalarNode('handler')->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Handler\\LinkFormHandler')->end()
+                                ->scalarNode('type')
+                                    ->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Type\\LinkType')
+                                ->end()
+                                ->scalarNode('handler')
+                                    ->defaultValue('Black\\Bundle\\LinkBundle\\Form\\Handler\\LinkFormHandler')
+                                ->end()
                             ->end()
                         ->end()
                     ->end()
                 ->end()
-            ->end()
-        ;
+            ->end();
     }
 }
