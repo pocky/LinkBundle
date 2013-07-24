@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Gedmo\Mapping\Annotation as Gedmo;
 
-use Black\Bundle\EngineBundle\Traits\ThingEntityTrait;
+use Black\Bundle\CommonBundle\Traits\ThingEntityTrait;
 use Black\Bundle\LinkBundle\Model\Category as BaseCategory;
 
 /**
